@@ -1,0 +1,549 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+/* Paleta de cores do projeto */
+:root {
+    --terracota: #C8753D;
+    --laranja: #E69A59;
+    --bege: #EDE0CA;
+    --creme: #FAF6EF;
+    --laranja-escuro: #A85E35;
+    --marrom: #55483D;
+}
+
+/* Configuração geral da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--creme);
+    color: var(--marrom);
+    line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+h2 {
+    color: var(--terracota);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   2. CABEÇALHO E MENU
+========================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    background-color: var(--bege);
+    padding: 20px 8%;
+}
+
+.logo h1 {
+    color: var(--terracota);
+    font-size: 25px;
+}
+
+/* Organização dos links do menu */
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--marrom);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: var(--terracota);
+}
+
+
+/* =========================================
+   3. BANNERS
+========================================= */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    background: linear-gradient(
+        135deg,
+        var(--terracota),
+        var(--laranja)
+    );
+
+    color: white;
+    padding: 80px 8%;
+}
+
+/* Conteúdo textual do banner */
+.banner-conteudo {
+    flex: 1;
+}
+
+.banner h1,
+.banner h2 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+/* Imagem do banner */
+.banner img {
+    width: 45%;
+    max-width: 500px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Banners que possuem somente texto */
+.banner-texto {
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-texto .banner-conteudo {
+    max-width: 800px;
+}
+
+.banner-texto p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   4. BOTÕES
+========================================= */
+
+.botao,
+button {
+    display: inline-block;
+    background-color: var(--marrom);
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao:hover,
+button:hover {
+    background-color: var(--laranja-escuro);
+}
+
+
+/* =========================================
+   5. SEÇÕES GERAIS
+========================================= */
+
+.sobre-inicial,
+.projetos-destaque,
+.nossos-objetivos,
+.conteudo-institucional,
+.pagina-projetos,
+.area-contato,
+.informacoes-contato,
+.chamada-final {
+    padding: 65px 8%;
+}
+
+.sobre-inicial,
+.projetos-destaque,
+.nossos-objetivos,
+.chamada-final {
+    text-align: center;
+}
+
+.sobre-inicial p {
+    max-width: 850px;
+    margin: 0 auto 25px;
+}
+
+.conteudo-institucional h2,
+.pagina-projetos h2,
+.area-contato h2,
+.informacoes-contato h2 {
+    text-align: center;
+}
+
+.conteudo-institucional p {
+    max-width: 900px;
+    margin: 0 auto 18px;
+}
+
+.fundo-claro {
+    background-color: var(--bege);
+}
+
+
+/* =========================================
+   6. CARDS DE OBJETIVOS
+========================================= */
+
+.objetivos-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+.card-objetivo {
+    flex: 1 1 250px;
+    max-width: 350px;
+
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s;
+}
+
+.card-objetivo h3 {
+    color: var(--terracota);
+    margin-bottom: 12px;
+}
+
+.card-objetivo:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   7. CARDS DE PROJETOS
+========================================= */
+
+.projetos-container,
+.lista-projetos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+.card-projeto {
+    flex: 1 1 280px;
+    max-width: 350px;
+
+    background-color: white;
+    padding: 22px;
+
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-projeto h3 {
+    color: var(--terracota);
+    margin-bottom: 12px;
+}
+
+.card-projeto p {
+    font-size: 15px;
+}
+
+.projetos-destaque > .botao {
+    margin-top: 35px;
+}
+
+.introducao-projetos {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contribuicao {
+    border-top: 1px solid var(--bege);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   8. CHAMADA FINAL
+========================================= */
+
+.chamada-final {
+    background-color: var(--bege);
+}
+
+.chamada-final p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================================
+   9. FORMULÁRIO DE CONTATO
+========================================= */
+
+.area-contato {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.area-contato > p {
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    margin-top: 30px;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.campo-formulario textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    outline: 2px solid var(--laranja);
+    border-color: var(--terracota);
+}
+
+.aviso-formulario {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   10. MENSAGENS DO JAVASCRIPT
+========================================= */
+
+#mensagem-formulario {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensagem-erro {
+    color: #A32626;
+}
+
+.mensagem-sucesso {
+    color: #246B35;
+}
+
+
+/* =========================================
+   11. INTERAÇÃO ADICIONAL
+========================================= */
+
+.informacoes-contato {
+    text-align: center;
+    background-color: white;
+}
+
+#informacoes-ong {
+    max-width: 800px;
+    margin: 25px auto 0;
+
+    padding: 25px;
+    background-color: var(--bege);
+    border-radius: 8px;
+}
+
+#informacoes-ong p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   12. RODAPÉ
+========================================= */
+
+footer {
+    background-color: var(--marrom);
+    color: white;
+
+    text-align: center;
+    padding: 25px 8%;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   13. ACESSIBILIDADE DO TECLADO
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--laranja-escuro);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   14. RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Cabeçalho e menu */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    /* Banner */
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .banner h1,
+    .banner h2 {
+        font-size: 29px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 230px;
+    }
+
+    /* Seções */
+    .sobre-inicial,
+    .projetos-destaque,
+    .nossos-objetivos,
+    .conteudo-institucional,
+    .pagina-projetos,
+    .area-contato,
+    .informacoes-contato,
+    .chamada-final {
+        padding: 45px 7%;
+    }
+
+    /* Cards */
+    .card-projeto,
+    .card-objetivo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Formulário */
+    form {
+        padding: 20px;
+    }
+
+    .botao,
+    button {
+        max-width: 100%;
+    }
+
+    .area-contato .botao {
+        width: 100%;
+    }
+
+    footer {
+        padding: 25px 7%;
+    }
+}

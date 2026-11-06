@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor que Transforma | Contato</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho e menu de navegação -->
+    <header>
+        <div class="logo">
+            <h1>Sabor que Transforma</h1>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Apresentação da página -->
+        <section class="banner banner-texto">
+            <div class="banner-conteudo">
+                <h2>Entre em contato</h2>
+
+                <p>
+                    Quer conhecer melhor nossas iniciativas ou participar
+                    das ações? Envie uma mensagem pelo formulário abaixo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Formulário de contato -->
+        <section class="area-contato">
+
+            <h2>Envie sua mensagem</h2>
+
+            <p>
+                Preencha os campos para demonstrar seu interesse em
+                conhecer ou participar das atividades da organização.
+            </p>
+
+            <form id="formulario-contato">
+
+                <div class="campo-formulario">
+                    <label for="nome">Nome completo:</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        minlength="3"
+                        required
+                        placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">E-mail:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="exemplo@email.com">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="assunto">Assunto:</label>
+
+                    <input
+                        type="text"
+                        id="assunto"
+                        name="assunto"
+                        required
+                        placeholder="Digite o assunto">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensagem">Mensagem:</label>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        minlength="10"
+                        required
+                        placeholder="Escreva sua mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="botao">
+                    Enviar mensagem
+                </button>
+
+                <!-- Retorno da validação do formulário -->
+                <p id="mensagem-formulario" aria-live="polite"></p>
+
+            </form>
+
+            <p class="aviso-formulario">
+                Atenção: este formulário faz parte de um projeto acadêmico.
+                O envio é apenas uma simulação. Nenhum e-mail será enviado
+                e nenhum dado será armazenado.
+            </p>
+
+        </section>
+
+        <!-- Orientações de participação -->
+        <section class="conteudo-institucional fundo-claro">
+
+            <h2>Como participar?</h2>
+
+            <div class="lista-projetos">
+
+                <article class="card-projeto">
+                    <h3>Seja voluntário</h3>
+
+                    <p>
+                        Demonstre interesse em colaborar com as atividades
+                        educativas e iniciativas da organização.
+                    </p>
+                </article>
+
+                <article class="card-projeto">
+                    <h3>Compartilhe conhecimentos</h3>
+
+                    <p>
+                        Compartilhe receitas, dicas de aproveitamento
+                        de alimentos e experiências com a comunidade.
+                    </p>
+                </article>
+
+                <article class="card-projeto">
+                    <h3>Divulgue a causa</h3>
+
+                    <p>
+                        Ajude a divulgar a importância da alimentação
+                        consciente e da redução do desperdício.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Interação adicional obrigatória -->
+        <section class="informacoes-contato">
+
+            <h2>Quer saber mais sobre a ONG?</h2>
+
+            <p>
+                Clique no botão para visualizar mais informações
+                sobre o Sabor que Transforma.
+            </p>
+
+            <button
+                type="button"
+                id="botao-informacoes"
+                aria-expanded="false"
+                aria-controls="informacoes-ong">
+
+                Saiba mais
+
+            </button>
+
+            <div id="informacoes-ong" hidden>
+
+                <p>
+                    O Sabor que Transforma é uma organização fictícia
+                    desenvolvida para fins acadêmicos, com foco na
+                    educação alimentar, no consumo consciente e na
+                    redução do desperdício de alimentos.
+                </p>
+
+                <p>
+                    Nosso propósito é incentivar a comunidade a adotar
+                    práticas simples e acessíveis que contribuam para
+                    uma relação mais consciente com a alimentação.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Sabor que Transforma | Projeto acadêmico fictício</p>
+        <p>Promovendo alimentação consciente e redução do desperdício.</p>
+    </footer>
+
+    <!-- Arquivo externo de JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
