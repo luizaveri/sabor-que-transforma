@@ -44,6 +44,7 @@ Além dos conhecimentos técnicos, o trabalho proporcionou experiências de cola
 Projeto desenvolvido colaborativamente por:
 
 * Ana Beatriz Ribeiro
+* Luiza Verissimo
 * Isabelle Cortez
 * Pedro Mendes
 * Bruno Rodrigues Ribeiro
